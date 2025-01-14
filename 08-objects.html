@@ -50,7 +50,63 @@
 
         console.log(typeof console.log)
 
-       
+       //Using JSON to convert to Javascript object and vice versa
+        console.log(JSON.stringify(product2))
+
+        const jsonString = JSON.stringify(product2)
+        console.log(JSON.parse(jsonString))
+
+
+        //autoboxing
+          console.log('hello'.length)
+          console.log('hello'.toUpperCase())
+         
+        //objects are references
+          const object1 = {
+            message: 'hello'
+          }
+          const object2 = object1;
+
+          object1.message = 'good job';
+          console.log(object1);
+          console.log(object2);
+
+          //objects can't be compared directly
+          const object3 = {
+            message: 'good job'
+          };
+          console.log(object3 === object1 )
+          console.log(object2 === object1)
+
+          const object4 = {
+            message: 'good job', 
+            price: 799
+          };
+          //const message = object4.message;
+
+
+          //this is called destructuring
+          const { message, price } = object4
+          console.log(message)
+          console.log(price)
+
+          //shorthand property
+          const object5 = {
+           // message: message
+            message,
+
+
+            //shorthand method syntax
+           // method: function function1(){
+             // console.log('method');
+            //}
+
+            method(){
+              console.log('method')
+            }
+          };
+          console.log(object5)
+          object5.method();
       </script>
         </body>
 
