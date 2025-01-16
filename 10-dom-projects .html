@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html> 
 <head>
-      <title>DOM Projects</title>
+      <title>CSS with DOM Projects</title>
+        <style>
+          .subscribe-button {
+            color: white;
+            border:none;
+            background-color: black;
+            padding: 8px 10px 8px 10px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor:pointer; 
+          }
+          .is-subscribed{
+            background-color: rgb(240, 240, 240);
+            color: black;
+          }
+        </style>
   </head>
     <body>
 
@@ -9,7 +24,7 @@
        
       <button  onclick ="
         subscribe()
-      " class="js-subscribe-button"> 
+      " class="js-subscribe-button subscribe-button"> 
        Subscribe </button>
 
 
@@ -62,6 +77,7 @@
 
             if (buttonElement.innerText === 'Subscribe'){
             buttonElement.innerText = 'Subscribed'
+            buttonElement.classList.add('is-subscribed');
             } else {
             buttonElement.innerText = 'Subscribe';
             }
