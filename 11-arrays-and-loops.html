@@ -28,14 +28,14 @@
     console.log(myarray)
 
     console.log(myarray.splice(0, 2)); 
-    */
+    
 
     // learning loops
 
     //While Loops
     
 
-    /*
+    
     let i = 1
 
     while (i <= 5) {
@@ -57,26 +57,26 @@
 
     console.log(randomNumber )
 
-     */ 
+     
 
 
      //Looping through an array
 
-     /*
+     
      const todoList = [
       'make dinner',
       'wash dishes',
       'watch youtube'
      ];
 
-     for (let index = 0; index <=todoList.length; 
+     for (let index = 0; index <= todoList.length; 
       index++) { 
         const value = todoList[index];
 
         console.log(value)
 
      }
-        */
+        
 
         //Accumalator Pattern
 
@@ -99,6 +99,66 @@
           numsDoubled.push(num * 2)
         }
         console.log(numsDoubled)
-  </script>
+
+        */
+
+        //more about arrays and loops
+
+        const array1 = [1, 2, 3] //so this array does nota actually contain the numbers 1, 2, 3. The array numbers are stored somewhere in the computer's memory and the variable array1 points to it. In this sense, array1 is not an array but a reference.
+
+        const array2 = array1.slice(); //here array2 is poiting to the reference of array1 which means they both point to [1,2,3] stored somewhere in memeory
+
+        array2.push(4);
+        console.log(array1);
+        console.log(array2);
+
+        const [firstValue, secondValue] = [1,2,3]; 
+
+        //more about loops
+        //continue and break features
+
+        for (i = 0; i <= 10; i++) {
+          if (i % 3 === 0){
+            continue;
+          }
+          console.log(i);
+          if (i === 8){
+            break;
+          }
+        }
+
+        let i = 1;
+         
+        while (i <= 10) {
+          if (i % 3 === 0){
+            i++ // here the increment step is used manually because a while loop will run infinitely if it is not done this way
+            continue;
+          }
+          console.log(i)
+          
+        }
+
+        // how to use loops with functions
+
+        function doubleArray (nums) {
+        const numsDoubled =[];
+
+        for (let i = 0;  i < nums.length; i++) {
+          const num = nums[i];
+           
+          if (num === 0) {
+            return numsDoubled;
+          }
+
+          numsDoubled.push(num * 2)
+        }
+        return numsDoubled
+
+      }
+
+      console.log(doubleArray([1, 1, 3]));
+      console.log(doubleArray([2, 3, 200, 0, 5]))
+         
+  </script> 
 </body>
 </html>    
