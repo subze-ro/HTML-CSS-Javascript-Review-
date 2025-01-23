@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title>Advanced Functions </title>
+</head>
+<body>
+
+
+  <script>
+    /*
+    function greeting () {
+      console.log('hello')
+    }
+    greeting()
+
+    //functions are values and can be stored inside variables like so...
+     const function1 = function () {
+      console.log('hello2');
+     }
+
+     console.log(function1)
+     console.log(typeof function1)
+     function1();
+
+
+     //we can save a function inside objects too...
+     const object1 = {
+      num: 2,
+      fun: function() {
+        console.log('hello3')
+      }
+     };
+     object1.fun();
+
+     //we can also pass values into a function...
+      function display(param) {
+        console.log(param)
+      }
+      display(2);
+
+      //passing a function into a function...
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log('hello4')
+      });
+
+      */
+
+      //Built in Javascript features setTimeout, setInterval
+      //setTimeout
+
+      /*
+      setTimeout( function () {
+        console.log('time out')
+        console.log('time out 2')
+      }, 3000);
+
+      console.log('next line')
+
+
+      //setInterval 
+      setInterval(function () {
+        console.log('interval');
+      }, 3000);
+
+      */
+
+      //looping through an array using the forEach method by putting a function inside it and passing a parameter 
+
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube '
+      ]
+      .forEach(function (value, index) {
+
+        if (value === 'wash dishes'){
+          return;
+        }
+        console.log(index)
+        console.log(value);
+      });
+  </script>
+</body>
+</html>
